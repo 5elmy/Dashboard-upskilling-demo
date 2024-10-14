@@ -80,7 +80,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-[#FEAF00] flex justify-center items-center">
-      <form onSubmit={loginForm.handleSubmit} className="bg-[#FFFFFF] w-[30%] rounded-[20px] p-5 shadow-[2px 5px 10px 0px #0000001A]">
+      <form onSubmit={loginForm.handleSubmit} className="bg-[#FFFFFF] w-[80%] md:w-[50%] lg:w-[30%] rounded-[20px] p-5 shadow-[2px 5px 10px 0px #0000001A]">
         <div className="flex justify-center items-center">
           <div className="border-l-4 border-[#FEAF00] ps-3 font-montserrat text-2xl font-bold leading-[29.26px] text-left ">
             User Management System
