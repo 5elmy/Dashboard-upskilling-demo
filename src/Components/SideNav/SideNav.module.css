@@ -1,0 +1,12 @@
+ .menuItem {
+    /* padding: 10px; */
+    transition: background-color 0.3s ease;
+  }
+  
+  .menuItem:hover {
+    background-color: #FEAF00;
+  
+  } 
+  
+ 
+  
