@@ -9,11 +9,17 @@ import AddUsers from './Components/AddUsers/AddUsers.jsx';
 import Profile from './Components/Profile/Profile.jsx';
 import UpdateUsers from './Components/UpdateUsers/UpdateUsers.jsx';
 import { ToastContainer } from 'react-toastify';
+import ForgetPassword from './Components/ForgetPassword/ForgetPassword.jsx';
+import OTP from './Components/OTP/OTP.jsx';
+import ResetPassword from './Components/ResetPassword/ResetPassword.jsx';
 
 function App() {
   let routes = createHashRouter([
     { index:true, element: <Login /> } ,
     { path:"login", element: <Login /> } ,
+    { path:"forget-password", element: <ForgetPassword /> } ,
+    { path:"otp", element: <OTP /> } ,
+    { path:"reset-password", element: <ResetPassword /> } ,
     {path:"dashboard" , element:<Layout/>,children:[
       {index:true , element:<Home/> } ,
       {path:"user-list" , element:<Users/>},

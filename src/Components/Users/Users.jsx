@@ -5,6 +5,7 @@ import { CiEdit } from 'react-icons/ci'
 import { MdOutlineDelete } from 'react-icons/md'
 import { Link, useNavigate } from 'react-router-dom'
 import img from "../../assets/images/Sidebar/pexels-photo-2379004 1.png";
+import { USMModal } from '../Modal/Modal'
 export default function Users() {
   let [users, setUsers] = useState([])
   let [currentPage, setCurrentPage] = useState(1)
@@ -62,12 +63,12 @@ export default function Users() {
           </thead>
 
           <tbody>
-            {currentUsers.map((user) => (
+            {currentUsers.map((user,index) => (
               <React.Fragment key={user.id}>
                 <tr className="bg-white rounded-[10px]">
-                  <td className="w-[53px] h-[53px] rounded-lg">
-                    {/* <img src={user.image} alt="" /> */}
-                    <img src={img} alt="" />
+                  <td className="w-full md:w-[70px] rounded-lg">
+                   
+                    <img src={`https://randomuser.me/api/portraits/men/${user.id}.jpg`} className='w-full h-full object-fill' alt="" />
                   </td>
                   <th scope="row" className="px-6 py-4 font-medium text-[12px] text-gray-900 whitespace-nowrap dark:text-white">
                     {user.firstName + " " + user.maidenName + " " + user.lastName}
@@ -77,11 +78,15 @@ export default function Users() {
                   <td className="px-6 py-4 text-[12px]">{user.birthDate}</td>
                   <td className="px-6 py-4 text-[12px]">{user.age}</td>
                   <td className="px-6 py-4 text-[12px]">{user.address.address}, {user.address.city}, {user.address.country}</td>
-                  <td className="px-6 py-4 text-[17px] cursor-pointer flex gap-1 items-center">
+                  <td className="px-6 py-4 text-[20px] cursor-pointer flex gap-1 items-center">
                     <CiEdit onClick={()=>{
                       navigate(`/dashboard/user/${user.id}`)
                     }} className='text-[#FEAF00]' />
-                    <MdOutlineDelete className='text-[#FEAF00]' />
+                      
+                    <USMModal icon={<MdOutlineDelete className='text-[#FEAF00]' />} />
+
+                    
+                    
                     
                     </td>
                 </tr>

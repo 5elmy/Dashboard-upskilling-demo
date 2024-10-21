@@ -61,7 +61,7 @@ export default function UpdateUsers() {
 
     <hr className='w-[99%] mx-auto bg-[#ccc8c8] border-0 h-[2px] my-3' />
 
-    <form onSubmit={updateuser.handleSubmit } className='w-[80%] mx-auto rounded-[20px] bg-white shadow-[2px 5px 10px 0px #0000001A] mt-20 p-5'>
+    <form onSubmit={updateuser.handleSubmit } className='w-[99%] md:w-[80%] mx-auto rounded-[20px] bg-white shadow-[2px 5px 10px 0px #0000001A] mt-20 p-5'>
 
  <div  className='lg:flex gap-8 w-full mt-12'>
  <div className="flex flex-col gap-3 w-full">

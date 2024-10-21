@@ -1,10 +1,11 @@
+
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import React from "react";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function ForgetPassword() {
 
   let navigate = useNavigate()
 
@@ -17,14 +18,14 @@ export default function Login() {
       email: Yup.string()
         .email("Invalid email address")
         .required("Email is required"),
-      password: Yup.string()
-        .required("Password is required")
+     
     }),
     onSubmit: async (values) => {
       console.log(values);
-      sessionStorage.setItem("values",{email:values.email, password:values.password})
-      toast("login is successfully")
-      navigate("/dashboard")
+     
+      toast("check email for otp ")
+      navigate("/otp")
+      
 
     }
   });
@@ -39,10 +40,10 @@ export default function Login() {
         </div>
         <div className="my-6">
           <p className="font-montserrat text-xl font-semibold leading-[26.82px] text-center py-3 uppercase">
-            Sign In
+            Forget Password
           </p>
           <p className="font-montserrat text-sm font-normal leading-[17.07px] text-center text-[#6C6C6C]">
-            Enter your credentials to access your account
+          Don’t worry, happens to all of us. Enter your email below to recover your password
           </p>
         </div>
         <div className="flex flex-col gap-3">
@@ -61,31 +62,15 @@ export default function Login() {
             <div className="text-red-500 text-sm">{loginForm.errors.email}</div>
           ) : null}
         </div>
-        <div className="flex flex-col gap-3 my-3">
-          <label htmlFor="password" className="font-montserrat text-[14px] font-medium leading-[17.07px] text-left">
-            Password
-          </label>
-          <input
-            onChange={loginForm.handleChange}
-            onBlur={loginForm.handleBlur}
-            value={loginForm.values.password}
-            name="password"
-            type="password"
-            placeholder="Enter your Password"
-            className="border focus:outline-gray-300 border-gray-300 h-[44px] rounded-[4px] focus:border-none"
-          />
-          {loginForm.touched.password && loginForm.errors.password ? (
-            <div className="text-red-500 text-sm">{loginForm.errors.password}</div>
-          ) : null}
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-1 text-[#FEAF00] font-montserrat text-[14px] font-medium leading-[17.07px]"> <input className="mt-1" type="checkbox" /> remember me</div>
-          <p className="text-[#FEAF00] font-montserrat text-[14px] font-medium leading-[17.07px]"><Link to={"/forget-password"}>Forget Password ?</Link></p>
-        </div>
+
 
         <button type="submit" className="uppercase bg-[#FEAF00] w-full h-[44px] rounded-[4px] text-white my-3">
-          Sign in
+          Submit
         </button>
+        <div className="flex justify-center items-center">
+
+        <small className="text-center  w-full">Already have an account? <span className="text-[#FEAF00]"><Link to={"/login"}>Login</Link></span></small>
+        </div>
       </form>
     </div>
   );

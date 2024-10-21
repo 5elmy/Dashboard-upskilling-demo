@@ -49,6 +49,11 @@ export default function SideNavSmall() {
         } md:translate-x-0`}
       >
         <Sidebar className={`h-full bg-[#F2EAE1] sticky top-0`}>
+        <div className="p-3">
+          <div className="border-l-4 mt-5 border-[#FEAF00] ps-3 font-montserrat text-2xl font-bold leading-[29.26px] text-left ">
+            UMS
+          </div>
+        </div>
           <div className='flex flex-col justify-center items-center py-10'>
             <img src={img} alt="profile" className='rounded-full' />
             <h2 className='text-[#000000] font-montserrat text-[17px] font-bold leading-[20.72px] text-center mt-6'>

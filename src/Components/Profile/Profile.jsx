@@ -10,7 +10,7 @@ export default function Profile() {
 
  <div className='w-full relative'>
 
-<div className='w-[80%] mx-auto rounded-[20px] bg-white shadow-[2px 5px 10px 0px #0000001A] mt-20 pb-10 p-5'>
+<div className='w-[99%] md:w-[80%] mx-auto rounded-[20px] bg-white shadow-[2px 5px 10px 0px #0000001A] mt-20 pb-10 p-5'>
  <img src={img} alt="" className='absolute -top-[70px] lg:left-[45%] left-[35%]  rounded-full' />
 
 <div className='lg:flex gap-8 w-full mt-20'>
