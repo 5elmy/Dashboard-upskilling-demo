@@ -22,8 +22,9 @@ export default function Login() {
     }),
     onSubmit: async (values) => {
       console.log(values);
-      sessionStorage.setItem("values",{email:values.email, password:values.password})
+      sessionStorage.setItem("email",values.email)
       toast("login is successfully")
+
       navigate("/dashboard")
 
     }

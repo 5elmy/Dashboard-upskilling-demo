@@ -23,7 +23,7 @@ export default function ResetPassword() {
       password: "",
       confirmpassword: ""
     },
-    validationSchema, // Apply the validation schema here
+    validationSchema, 
     onSubmit: async (values) => {
       console.log(values);
       toast.success("Password reset successful");

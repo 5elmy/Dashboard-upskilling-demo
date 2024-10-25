@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SideNav from '../SideNav/SideNav'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar'
 
 export default function Layout() {
+  let navigate = useNavigate()
+  useEffect(()=>{
+  if(!sessionStorage.getItem("email")){
+    navigate("/")
+  }
+  },[])
   return (
     <div className='flex w-full '>
       <div className='hidden lg:block'>

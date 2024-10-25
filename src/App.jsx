@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import ForgetPassword from './Components/ForgetPassword/ForgetPassword.jsx';
 import OTP from './Components/OTP/OTP.jsx';
 import ResetPassword from './Components/ResetPassword/ResetPassword.jsx';
+import GeneralForm from './Utils/GeneralForm.jsx';
 
 function App() {
   let routes = createHashRouter([
@@ -25,6 +26,7 @@ function App() {
       {path:"user-list" , element:<Users/>},
       {path:"user/:id" , element:<UpdateUsers/>},
       {path:"add-user" , element:<AddUsers/>},
+      {path:"general" , element:<GeneralForm/>},
       {path:"profile" , element:<Profile/>},
   
     ]}
