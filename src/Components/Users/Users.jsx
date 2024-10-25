@@ -66,19 +66,19 @@ export default function Users() {
             {currentUsers.map((user,index) => (
               <React.Fragment key={user.id}>
                 <tr className="bg-white rounded-[10px]">
-                  <td className="w-full md:w-[70px] rounded-lg">
+                  <td className="w-full md:w-[70px] ">
                    
-                    <img src={`https://randomuser.me/api/portraits/men/${user.id}.jpg`} className='w-full h-full object-fill' alt="" />
+                    <img src={`https://randomuser.me/api/portraits/men/${user.id}.jpg`} className='w-full rounded-full md:rounded-lg  h-full object-fill' alt="" />
                   </td>
-                  <th scope="row" className="px-6 py-4 font-medium text-[12px] text-gray-900 whitespace-nowrap dark:text-white">
+                  <th scope="row" className="px-1 md:px-6 md:py-4 font-medium text-[12px] text-gray-900 whitespace-nowrap dark:text-white">
                     {user.firstName + " " + user.maidenName + " " + user.lastName}
                   </th>
-                  <td className="px-6 py-4 text-[12px]">{user.email}</td>
-                  <td className="px-6 py-4 text-[12px]">{user.phone}</td>
-                  <td className="px-6 py-4 text-[12px]">{user.birthDate}</td>
-                  <td className="px-6 py-4 text-[12px]">{user.age}</td>
-                  <td className="px-6 py-4 text-[12px]">{user.address.address}, {user.address.city}, {user.address.country}</td>
-                  <td className="px-6 py-4 text-[20px] cursor-pointer flex gap-1 items-center">
+                  <td className="px-1 md:px-6 md:py-4 text-[12px]">{user.email}</td>
+                  <td className="px-1 md:px-6 md:py-4 text-[12px]">{user.phone}</td>
+                  <td className="px-1 md:px-6 md:py-4 text-[12px]">{user.birthDate}</td>
+                  <td className="px-1 md:px-6 md:py-4 text-[12px]">{user.age}</td>
+                  <td className="px-1 md:px-6 md:py-4 text-[12px]">{user.address.address}, {user.address.city}, {user.address.country}</td>
+                  <td className="px-1 md:px-6 md:py-4 text-[20px] cursor-pointer flex gap-1 items-center">
                     <CiEdit onClick={()=>{
                       navigate(`/dashboard/user/${user.id}`)
                     }} className='text-[#FEAF00]' />
