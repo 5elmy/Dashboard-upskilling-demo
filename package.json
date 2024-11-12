@@ -20,7 +20,10 @@
     "react-router-dom": "^6.26.2",
     "react-spinners": "^0.14.1",
     "react-toastify": "^10.0.6",
+    "react-tsparticles": "^2.12.2",
     "recharts": "^2.13.0",
+    "tsparticles": "^3.5.0",
+    "tsparticles-slim": "^2.12.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {
